@@ -11,9 +11,10 @@ public class OnProdCondition implements Condition {
     @Override
     public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
 
+        //Boolean answer = null;
         if(answer == null) {
             // TODO : create your own code to check your production environment
-            answer = false;
+            answer = true;
         }
         return answer;
     }

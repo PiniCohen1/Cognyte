@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- For Support PostConstruct functionality -->
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+
+    <!-- Declare my Support Bean Post Processor -->
+    <bean class="com.cognyte.uranium.InjectRandomSBPProcessor" />
+
+    <!-- Declare my Beans -->
+    <bean id="enrichmentator" scope="singleton" class="com.cognyte.uranium.UraniumEnrichmentatorImpl">
+        <property name="number" value="12"/>
+    </bean>
+
+    <!--
+    <bean id="enrichmentator2" scope="prototype" class="com.cognyte.uranium.UraniumEnrichmentatorImpl2">
+    </bean>
+    -->
+</beans>
