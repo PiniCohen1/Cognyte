@@ -10,10 +10,14 @@ import java.util.List;
 @Service
 public class CoronaHospitalImpl implements CoronaHospital {
 
-    @Autowired
-    private List<CoronaDoctor> doctors;
+    private final List<CoronaDoctor> doctors;
 
     private int currentDoc = 0;
+
+    @Autowired
+    public CoronaHospitalImpl(List<CoronaDoctor> doctors) {
+        this.doctors = doctors;
+    }
 
     @Override
     public void treat() {
