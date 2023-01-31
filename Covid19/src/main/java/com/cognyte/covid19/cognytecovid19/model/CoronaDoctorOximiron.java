@@ -2,15 +2,20 @@ package com.cognyte.covid19.cognytecovid19.model;
 
 import com.cognyte.covid19.cognytecovid19.condition.ConditionOnEmergency;
 import static com.cognyte.covid19.cognytecovid19.condition.ConditionOnEmergency.Priority;
+import lombok.Getter;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
-@Order(2)
-@ConditionOnEmergency(priority = Priority.Emergency)
-public class CoronaDoctorB implements CoronaDoctor {
+@Order(3)
+@ConditionOnEmergency(priority = Priority.Critical)
+public class CoronaDoctorOximiron implements CoronaDoctor {
+
+    @Getter
+    private final String treatMessage="Doctor treat Mutation Oximiron";
+
     @Override
     public void treatCurrentMutation() {
-        System.out.println("Doctor treat Mutation B");
+        System.out.println(treatMessage);
     }
 }

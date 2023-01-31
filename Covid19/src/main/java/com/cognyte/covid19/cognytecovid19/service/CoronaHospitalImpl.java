@@ -26,7 +26,7 @@ public class CoronaHospitalImpl implements CoronaHospital {
 
         // Execute logic for specific type of object
 
-//        if(doctors.get(currentDoc) instanceof CoronaDoctorC) {
+//        if(doctors.get(currentDoc) instanceof CoronaDoctorOximiron) {
 //            System.out.println("This one is from instanceof:" +
 //                    ((CoronaDoctorC)doctors.get(currentDoc)).getTreatMessage());
 //        }

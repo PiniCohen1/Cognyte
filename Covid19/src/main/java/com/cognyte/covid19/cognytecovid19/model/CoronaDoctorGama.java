@@ -8,12 +8,12 @@ import org.springframework.stereotype.Component;
 @Component
 @Order(1)
 @ConditionOnEmergency(priority = Priority.Regualr)
-public class CoronaDoctorA implements CoronaDoctor {
+public class CoronaDoctorGama implements CoronaDoctor {
 
 
     @Override
     public void treatCurrentMutation() {
         // Here you will right your logic
-        System.out.println("Doctor treat Mutation A");
+        System.out.println("Doctor treat Mutation Gama");
     }
 }
