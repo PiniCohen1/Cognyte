@@ -1,4 +1,4 @@
-package com.cognyte.uranium;
+package com.cognyte.uranium.beforeinit;
 
 import lombok.SneakyThrows;
 import org.springframework.beans.BeansException;
