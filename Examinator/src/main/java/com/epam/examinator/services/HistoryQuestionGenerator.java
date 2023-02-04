@@ -1,14 +1,10 @@
 package com.epam.examinator.services;
 
 import com.epam.examinator.models.Question;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
-@Service("history")
 public class HistoryQuestionGenerator implements QuestionGenerator {
 
     private final List<Question> questions = new ArrayList<>(List.of(
@@ -28,14 +24,11 @@ public class HistoryQuestionGenerator implements QuestionGenerator {
 
     @Override
     public Question getRandomQuestion() {
-        Random random = new Random();
-        int i = random.nextInt(questions.size());
-        return questions.get(i);
+        // TODO : get randomize question
     }
 
     @Override
     public List<Question> getRandomQuestions(int amount) {
-        Collections.shuffle(questions);
-        return questions.subList(0, amount);
+        // TODO :get specific amount of questions from list
     }
 }
