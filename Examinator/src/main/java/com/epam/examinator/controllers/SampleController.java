@@ -4,8 +4,7 @@ import com.epam.examinator.models.Person;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-//@RequestMapping("/api/")
-public class ExminatorController {
+public class SampleController {
 
     @GetMapping("/api/hello")
     public String hello() {
