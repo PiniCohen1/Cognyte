@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.epam</groupId>
     <artifactId>Examinator</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>Examinator</name>
     <description>Examinator</description>
     <properties>

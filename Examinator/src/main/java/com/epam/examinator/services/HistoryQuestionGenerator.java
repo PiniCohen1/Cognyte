@@ -1,10 +1,14 @@
 package com.epam.examinator.services;
 
 import com.epam.examinator.models.Question;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
+@Service("history")
 public class HistoryQuestionGenerator implements QuestionGenerator {
 
     private final List<Question> questions = new ArrayList<>(List.of(
@@ -19,16 +23,28 @@ public class HistoryQuestionGenerator implements QuestionGenerator {
                     .answer("2007").build(),
             Question.builder()
                     .question("What year did the Berlin Wall fall?")
-                    .answer("1989").build()
+                    .answer("1989").build(),
+            Question.builder()
+                    .question("What year did Google launch?")
+                    .answer("1998").build(),
+            Question.builder()
+                    .question("What year did the Internet become available to the public?")
+                    .answer("1993").build(),
+            Question.builder()
+                    .question("What year was Nelson Mandela freed from prison?")
+                    .answer("1990").build()
     ));
 
     @Override
     public Question getRandomQuestion() {
-        // TODO : get randomize question
+        Random random = new Random();
+        int i = random.nextInt(questions.size());
+        return questions.get(i);
     }
 
     @Override
     public List<Question> getRandomQuestions(int amount) {
-        // TODO :get specific amount of questions from list
+        Collections.shuffle(questions);
+        return questions.subList(0, amount);
     }
 }
